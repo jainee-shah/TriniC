@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 5756ed9e525cd334197f5ae042eb1103
+  - enabled: 1
+    path: Assets/Scenes/ConnectFour.unity
+    guid: de4c6bd2a69539a4d9bc6df84135f867
+  - enabled: 1
+    path: Assets/Scenes/Checkers.unity
+    guid: 59597772bd1801947b5dcd4fe053669c
+  - enabled: 1
+    path: Assets/Scenes/Chess.unity
+    guid: 06957eaaa6fc07f40adaf08a2399f769
+  m_configObjects: {}
