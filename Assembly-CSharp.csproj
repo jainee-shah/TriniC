@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\Checkers\CheckersBoard.cs" />
      <Compile Include="Assets\Scripts\Checkers\Piece.cs" />
      <Compile Include="Assets\Scripts\Menu\ButtonSound.cs" />
+     <Compile Include="Assets\Scripts\Menu\CreateAccount.cs" />
+     <Compile Include="Assets\Scripts\Menu\LoginAccount.cs" />
      <Compile Include="Assets\Scripts\Menu\SetEffects.cs" />
      <Compile Include="Assets\Scripts\Menu\SetMusic.cs" />
      <Compile Include="Assets\Scripts\Menu\SetVolume.cs" />
@@ -106,6 +108,7 @@
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Users.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

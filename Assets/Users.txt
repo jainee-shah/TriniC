@@ -1,0 +1,2 @@
+user: 1 pass: asdfasdf H1:000 H2:000 H3:000 G1:000 G2:000 G3:000 W1:000 W2:000 W3:000 end
+user: 2 pass: asdfasdf H1:000 H2:000 H3:000 G1:000 G2:000 G3:000 W1:000 W2:000 W3:000 end
