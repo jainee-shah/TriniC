@@ -24,17 +24,24 @@ public class LoginAccount : MonoBehaviour
     private string Password;
     private string form;
     private string[] lines;
+    private string path;
+
+    public void Start()
+    {
+        path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+    }
 
     public void LoginButton()
     {
         bool user, pass, login;
         user = pass = login = false;
+
         if (Username != "")
         {
             //if (!System.IO.File.Exists(@"C:/Users/Michael/Documents/_UnityProjects/TriniC/Assets/Users.txt"))
             {
                 user = true;
-                lines = System.IO.File.ReadAllLines(@"C:/Users/Michael/Documents/_UnityProjects/TriniC/Assets/Users.txt");
+                lines = System.IO.File.ReadAllLines(@path + "/TriniC/Users.txt");
             }
             /*else
             {
