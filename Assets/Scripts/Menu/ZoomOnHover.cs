@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ZoomOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public GameObject text = null;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -20,5 +21,6 @@ public class ZoomOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnClick()
     {
         GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
+        text.SetActive(false);
     }
 }

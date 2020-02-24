@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &26033371
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &60981007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,6 +2310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &182040917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,6 +2839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &220366442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3005,6 +3009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &233779842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,7 +3495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &289234192
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3945,6 +3950,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 310157155}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &310157153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3993,6 +4009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &334906118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4846,7 +4863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version 0.1e
+  m_text: Version 0.1f
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5477,6 +5494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &524677627
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,6 +6157,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 554071590}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &554071588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6187,6 +6216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &554899957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6634,6 +6664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &597833002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6988,6 +7019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &623638185
 GameObject:
   m_ObjectHideFlags: 0
@@ -9140,6 +9172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &796863234
 GameObject:
   m_ObjectHideFlags: 0
@@ -9605,6 +9638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &809920494
 GameObject:
   m_ObjectHideFlags: 0
@@ -10567,6 +10601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &957005525
 GameObject:
   m_ObjectHideFlags: 0
@@ -11251,6 +11286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1013040602
 GameObject:
   m_ObjectHideFlags: 0
@@ -12131,6 +12167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1085904415
 GameObject:
   m_ObjectHideFlags: 0
@@ -12466,6 +12503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1109930948
 GameObject:
   m_ObjectHideFlags: 0
@@ -12639,7 +12677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1110834847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13363,6 +13401,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1159316199}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1159316197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13411,6 +13460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1180546555
 GameObject:
   m_ObjectHideFlags: 0
@@ -13667,6 +13717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1196903567
 GameObject:
   m_ObjectHideFlags: 0
@@ -16742,6 +16793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1406327733
 GameObject:
   m_ObjectHideFlags: 0
@@ -17608,6 +17660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1440093658
 GameObject:
   m_ObjectHideFlags: 0
@@ -18471,6 +18524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1110834846}
 --- !u!1 &1509734833
 GameObject:
   m_ObjectHideFlags: 0
@@ -18802,6 +18856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1526582627
 GameObject:
   m_ObjectHideFlags: 0
@@ -19315,6 +19370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1570351154
 GameObject:
   m_ObjectHideFlags: 0
@@ -19469,6 +19525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1582806174
 GameObject:
   m_ObjectHideFlags: 0
@@ -19960,6 +20017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1618900657
 GameObject:
   m_ObjectHideFlags: 0
@@ -21137,6 +21195,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1829629118}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1829629116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21185,6 +21254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1841070917
 GameObject:
   m_ObjectHideFlags: 0
@@ -21302,6 +21372,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1841070922}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1841070920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21350,6 +21431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1841530064
 GameObject:
   m_ObjectHideFlags: 0
@@ -21757,6 +21839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1904029388
 GameObject:
   m_ObjectHideFlags: 0
@@ -22248,6 +22331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &1970699322
 GameObject:
   m_ObjectHideFlags: 0
@@ -22427,6 +22511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &2003946087
 GameObject:
   m_ObjectHideFlags: 0
@@ -22662,6 +22747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 2120213660}
 --- !u!1 &2010478914
 GameObject:
   m_ObjectHideFlags: 0
@@ -22818,6 +22904,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2013806872}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2013806870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22866,6 +22963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &2017478531
 GameObject:
   m_ObjectHideFlags: 0
@@ -23201,6 +23299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 289234191}
 --- !u!1 &2039841052
 GameObject:
   m_ObjectHideFlags: 0
@@ -23827,6 +23926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &2060081123
 GameObject:
   m_ObjectHideFlags: 0
@@ -24360,7 +24460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2120213661
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24751,6 +24851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c58837e7aea045b4071563aef3264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!1 &2142801032
 GameObject:
   m_ObjectHideFlags: 0
