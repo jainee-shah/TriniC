@@ -6,23 +6,35 @@ using UnityEngine.UI;
 public class ToggleFullscreen : MonoBehaviour
 {
     public Button button;
+    public GameObject menu;
+    public GameObject fullOff;
+    public GameObject fullOn;
+
+    Preferences pref;
 
     public void Start()
     {
         button.onClick.AddListener(OnClick);
+        pref = menu.GetComponent<Preferences>();
+    }
+
+    public void Update()
+    {
+        if (pref.full == "0")
+        {
+            fullOff.SetActive(true);
+            fullOn.SetActive(false);
+        }
+        else
+        {
+            fullOff.SetActive(false);
+            fullOn.SetActive(true);
+        }
     }
 
     void OnClick()
     {
-        if (Screen.fullScreen == true)
-        {
-            Screen.fullScreen = false;
-            Debug.Log("was fullscreen, now windowed");
-        }
-        else
-        {
-            Screen.fullScreen = true;
-            Debug.Log("was windowed, now fullscreen");
-        }
+        Debug.Log("Fullscreen button pressed");
+        pref.ToggleFullscreen();
     }
 }

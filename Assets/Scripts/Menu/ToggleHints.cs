@@ -6,24 +6,35 @@ using UnityEngine.UI;
 public class ToggleHints : MonoBehaviour
 {
     public Button button;
+    public GameObject menu;
+    public GameObject hintsOff;
+    public GameObject hintsOn;
+
+    Preferences pref;
 
     public void Start()
     {
         button.onClick.AddListener(OnClick);
+        pref = menu.GetComponent<Preferences>();
+    }
+
+    public void Update()
+    {
+        if (pref.hints == "0")
+        {
+            hintsOff.SetActive(true);
+            hintsOn.SetActive(false);
+        }
+        else
+        {
+            hintsOff.SetActive(false);
+            hintsOn.SetActive(true);
+        }
     }
 
     void OnClick()
     {
         Debug.Log("Hints button pressed");
-        /*if (Screen.fullScreen == true)
-        {
-            Screen.fullScreen = false;
-            Debug.Log("was fullscreen, now windowed");
-        }
-        else
-        {
-            Screen.fullScreen = true;
-            Debug.Log("was windowed, now fullscreen");
-        }*/
+        pref.ToggleHints();
     }
 }

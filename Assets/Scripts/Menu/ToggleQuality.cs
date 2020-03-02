@@ -6,24 +6,44 @@ using UnityEngine.UI;
 public class ToggleQuality : MonoBehaviour
 {
     public Button button;
+    public GameObject menu;
+    public GameObject quality3;
+    public GameObject quality2;
+    public GameObject quality1;
+
+    Preferences pref;
 
     public void Start()
     {
         button.onClick.AddListener(OnClick);
+        pref = menu.GetComponent<Preferences>();
+    }
+
+    public void Update()
+    {
+        if (pref.quality == "3")
+        {
+            quality3.SetActive(true);
+            quality2.SetActive(false);
+            quality1.SetActive(false);
+        }
+        else if (pref.text == "2")
+        {
+            quality3.SetActive(false);
+            quality2.SetActive(true);
+            quality1.SetActive(false);
+        }
+        else
+        {
+            quality3.SetActive(false);
+            quality2.SetActive(false);
+            quality1.SetActive(true);
+        }
     }
 
     void OnClick()
     {
         Debug.Log("Quality button pressed");
-        /*if (Screen.fullScreen == true)
-        {
-            Screen.fullScreen = false;
-            Debug.Log("was fullscreen, now windowed");
-        }
-        else
-        {
-            Screen.fullScreen = true;
-            Debug.Log("was windowed, now fullscreen");
-        }*/
+        pref.ToggleQuality();
     }
 }
