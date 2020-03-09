@@ -27,7 +27,7 @@ public class ToggleQuality : MonoBehaviour
             quality2.SetActive(false);
             quality1.SetActive(false);
         }
-        else if (pref.text == "2")
+        else if (pref.quality == "2")
         {
             quality3.SetActive(false);
             quality2.SetActive(true);

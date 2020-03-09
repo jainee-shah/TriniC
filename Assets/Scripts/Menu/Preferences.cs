@@ -12,8 +12,8 @@ public class Preferences : MonoBehaviour
     public string hints;
     public string full;
     public string quality;
-    public string music;
-    public string effects;
+    public float music;
+    public float effects;
 
     string path;
     string prefPath;
@@ -44,7 +44,7 @@ public class Preferences : MonoBehaviour
         return stringBetweenTwoStrings;
     }
 
-    private void UpdatePrefs()
+    public void UpdatePrefs()
     {
         path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
         prefPath = path + "/TriniC/Preferences.txt";
@@ -59,9 +59,9 @@ public class Preferences : MonoBehaviour
         //Debug.Log(full);
         quality = Between(readPrefs[0], "Quality:", 8, "Music:", 9);
         //Debug.Log(quality);
-        music = Between(readPrefs[0], "Music:", 6, "Effects:", 7);
+        music = float.Parse(Between(readPrefs[0], "Music:", 6, "Effects:", 7));
         //Debug.Log(music);
-        effects = Between(readPrefs[0], "Effects:", 8, "end", 9);
+        effects = float.Parse(Between(readPrefs[0], "Effects:", 8, "end", 9));
         //Debug.Log(effects);
     }
 
@@ -73,12 +73,12 @@ public class Preferences : MonoBehaviour
         int length2 = readPrefs[0].Length - subS1.Length - size;
         string subS2 = readPrefs[0].Substring(s2Index, length2);
         string temp = subS1 + value + subS2;
-        Debug.Log(s1Index);
-        Debug.Log(subS1);
-        Debug.Log(s2Index);
-        Debug.Log(length2);
-        Debug.Log(subS2);
-        Debug.Log(temp);
+        //Debug.Log(s1Index);
+        //Debug.Log(subS1);
+        //Debug.Log(s2Index);
+        //Debug.Log(length2);
+        //Debug.Log(subS2);
+        //Debug.Log(temp);
         System.IO.File.WriteAllText(@prefPath, temp);
     }
 
@@ -104,18 +104,18 @@ public class Preferences : MonoBehaviour
         UpdatePrefs();
         if (text == "3")
         {
-            text = "2";
-            ReplaceString("Colorblind:", 18, " Hints:", "2", 1);
-        }
-        else if (text == "2")
-        {
             text = "1";
             ReplaceString("Colorblind:", 18, " Hints:", "1", 1);
         }
-        else
+        else if (text == "2")
         {
             text = "3";
             ReplaceString("Colorblind:", 18, " Hints:", "3", 1);
+        }
+        else
+        {
+            text = "2";
+            ReplaceString("Colorblind:", 18, " Hints:", "2", 1);
         }
     }
 
@@ -124,12 +124,12 @@ public class Preferences : MonoBehaviour
         UpdatePrefs();
         if (hints == "0")
         {
-            hints = "0";
+            hints = "1";
             ReplaceString("Colorblind:", 26, " Fullscreen:", "1", 1);
         }
         else
         {
-            hints = "1";
+            hints = "0";
             ReplaceString("Colorblind:", 26, " Fullscreen:", "0", 1);
         }
     }
@@ -154,40 +154,48 @@ public class Preferences : MonoBehaviour
         UpdatePrefs();
         if (quality == "3")
         {
-            quality = "2";
-            ReplaceString("Colorblind:", 49, " Music:", "2", 1);
-        }
-        else if (quality == "2")
-        {
             quality = "1";
             ReplaceString("Colorblind:", 49, " Music:", "1", 1);
         }
-        else
+        else if (quality == "2")
         {
             quality = "3";
             ReplaceString("Colorblind:", 49, " Music:", "3", 1);
+        }
+        else
+        {
+            quality = "2";
+            ReplaceString("Colorblind:", 49, " Music:", "2", 1);
         }
     }
 
     public void SetMusic(float vol)
     {
         string temp;
-        if(Math.Round(vol, 2) < 0)
-            temp = "0" + (Math.Round(vol, 2)).ToString();
+        if (Math.Round(vol, 2) == 0)
+            temp = "0.00";
+        else if (Math.Round(vol, 2) == 1)
+            temp = "1.00";
         else
             temp = (Math.Round(vol, 2)).ToString();
         UpdatePrefs();
         ReplaceString("Colorblind:", 57, " Effects:", (temp), 4);
+        music = (float)Math.Round(vol, 2);
+        //Debug.Log(music);
     }
 
     public void SetEffects(float vol)
     {
         string temp;
-        if (Math.Round(vol, 2) < 0)
-            temp = "0" + (Math.Round(vol, 2)).ToString();
+        if (Math.Round(vol, 2) == 0)
+            temp = "0.00";
+        else if (Math.Round(vol, 2) == 1)
+            temp = "1.00";
         else
             temp = (Math.Round(vol, 2)).ToString();
         UpdatePrefs();
         ReplaceString("Colorblind:", 70, " end", (temp), 4);
+        effects = (float)Math.Round(vol, 2);
+        //Debug.Log(effects);
     }
 }

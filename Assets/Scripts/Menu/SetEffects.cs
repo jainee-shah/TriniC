@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetEffects : MonoBehaviour
 {
     private AudioSource source;
     public GameObject menu;
+    public Slider slid;
+    bool init = false;
 
     Preferences pref;
 
@@ -13,6 +16,16 @@ public class SetEffects : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
         pref = menu.GetComponent<Preferences>();
+    }
+
+    void Update()
+    {
+        if (init == false)
+        {
+            Debug.Log(pref.effects);
+            slid.value = pref.effects;
+            init = true;
+        }
     }
 
     public void SetVol(float vol)

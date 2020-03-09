@@ -1644,7 +1644,7 @@ RectTransform:
   m_GameObject: {fileID: 119455938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1618900658}
   m_RootOrder: 0
@@ -2008,6 +2008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 190841497}
+  slid: {fileID: 0}
 --- !u!1 &143214464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,8 +2983,8 @@ MonoBehaviour:
   hints: 
   full: 
   quality: 
-  music: 
-  effects: 
+  music: 0
+  effects: 0
 --- !u!1 &198593877
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,6 +6182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 190841497}
+  slid: {fileID: 809920496}
 --- !u!1 &396065380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6629,7 +6631,7 @@ RectTransform:
   m_GameObject: {fileID: 428674736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 291695869}
   m_RootOrder: 0
@@ -6859,7 +6861,7 @@ RectTransform:
   m_GameObject: {fileID: 454267435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 963678206}
   m_RootOrder: 0
@@ -9884,7 +9886,7 @@ RectTransform:
   m_GameObject: {fileID: 642621296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1568280601}
   m_RootOrder: 0
@@ -12077,7 +12079,7 @@ RectTransform:
   m_GameObject: {fileID: 793459099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1691292150}
   m_RootOrder: 0
@@ -12590,6 +12592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 190841497}
+  slid: {fileID: 1809638011}
 --- !u!1 &805732649
 GameObject:
   m_ObjectHideFlags: 0
@@ -12925,6 +12928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 190841497}
+  slid: {fileID: 809920496}
 --- !u!1 &811608315
 GameObject:
   m_ObjectHideFlags: 0
@@ -13632,7 +13636,7 @@ RectTransform:
   m_GameObject: {fileID: 860916235}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 190841498}
   m_RootOrder: 0
@@ -14101,7 +14105,7 @@ RectTransform:
   m_GameObject: {fileID: 930785995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 361157405}
   m_RootOrder: 0
@@ -23062,7 +23066,7 @@ RectTransform:
   m_GameObject: {fileID: 1417189961}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 2107977956}
   m_RootOrder: 0
@@ -24411,6 +24415,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1491224859}
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 190841500}
+        m_MethodName: UpdatePrefs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27287,6 +27302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 190841497}
+  slid: {fileID: 0}
 --- !u!1 &1691292149
 GameObject:
   m_ObjectHideFlags: 0
@@ -28279,6 +28295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 190841497}
+  slid: {fileID: 1809638011}
 --- !u!1 &1829283716
 GameObject:
   m_ObjectHideFlags: 0
@@ -30544,6 +30561,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2004137619}
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 190841500}
+        m_MethodName: UpdatePrefs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33298,7 +33326,7 @@ RectTransform:
   m_GameObject: {fileID: 2143281389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 2003946088}
   m_RootOrder: 0

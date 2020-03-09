@@ -10,6 +10,7 @@ public class ToggleTextSize : MonoBehaviour
     public GameObject text3;
     public GameObject text2;
     public GameObject text1;
+    private TextMesh[] text;
 
     Preferences pref;
 
@@ -17,6 +18,7 @@ public class ToggleTextSize : MonoBehaviour
     {
         button.onClick.AddListener(OnClick);
         pref = menu.GetComponent<Preferences>();
+        text = menu.GetComponents<TextMesh>();
     }
 
     public void Update()
@@ -44,6 +46,30 @@ public class ToggleTextSize : MonoBehaviour
     void OnClick()
     {
         Debug.Log("Text Size button pressed");
+        if (pref.text == "3")
+        {
+            foreach (var t in text)
+            {
+                Debug.Log("text was large");
+                t.fontSize *= 1;
+            }
+        }
+        else if (pref.text == "2")
+        {
+            foreach (var t in text)
+            {
+                Debug.Log("text was medium");
+                t.fontSize *= 3;
+            }
+        }
+        else
+        {
+            foreach (var t in text)
+            {
+                Debug.Log("text was small");
+                t.fontSize *= 2;
+            }
+        }
         pref.ToggleText();
     }
 }
