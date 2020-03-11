@@ -10,6 +10,7 @@ public class ToggleColorBlindMode : MonoBehaviour
     public GameObject menu;
     public GameObject colorOff;
     public GameObject colorOn;
+    bool init = false;
 
     Preferences pref;
 
@@ -21,15 +22,19 @@ public class ToggleColorBlindMode : MonoBehaviour
 
     public void Update()
     {
-        if (pref.color == "0")
+        if (init == false)
         {
-            colorOff.SetActive(true);
-            colorOn.SetActive(false);
-        }
-        else
-        {
-            colorOff.SetActive(false);
-            colorOn.SetActive(true);
+            if (pref.color == "0")
+            {
+                colorOff.SetActive(true);
+                colorOn.SetActive(false);
+            }
+            else
+            {
+                colorOff.SetActive(false);
+                colorOn.SetActive(true);
+            }
+            init = true;
         }
     }
 

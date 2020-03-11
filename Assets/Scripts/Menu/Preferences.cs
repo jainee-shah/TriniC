@@ -60,7 +60,7 @@ public class Preferences : MonoBehaviour
         quality = Between(readPrefs[0], "Quality:", 8, "Music:", 9);
         //Debug.Log(quality);
         music = float.Parse(Between(readPrefs[0], "Music:", 6, "Effects:", 7));
-        //Debug.Log(music);
+        //Debug.Log("update:" + music);
         effects = float.Parse(Between(readPrefs[0], "Effects:", 8, "end", 9));
         //Debug.Log(effects);
     }
@@ -169,33 +169,50 @@ public class Preferences : MonoBehaviour
         }
     }
 
+    private string MakeFourChar(float vol)
+    {
+        float temp = (float)Math.Round(vol, 2);
+        if (Mathf.Approximately(temp, 0))
+            return "0.00";
+        else if(Mathf.Approximately(temp, 0.1f))
+            return "0.10";
+        else if (Mathf.Approximately(temp, 0.2f))
+            return "0.20";
+        else if (Mathf.Approximately(temp, 0.3f))
+            return "0.30";
+        else if (Mathf.Approximately(temp, 0.4f))
+            return "0.40";
+        else if (Mathf.Approximately(temp, 0.5f))
+            return "0.50";
+        else if (Mathf.Approximately(temp, 0.6f))
+            return "0.60";
+        else if (Mathf.Approximately(temp, 0.7f))
+            return "0.70";
+        else if (Mathf.Approximately(temp, 0.8f))
+            return "0.80";
+        else if (Mathf.Approximately(temp, 0.9f))
+            return "0.90";
+        else if (Mathf.Approximately(temp, 1))
+            return "1.00";
+        else
+            return temp.ToString();
+    }
+
     public void SetMusic(float vol)
     {
-        string temp;
-        if (Math.Round(vol, 2) == 0)
-            temp = "0.00";
-        else if (Math.Round(vol, 2) == 1)
-            temp = "1.00";
-        else
-            temp = (Math.Round(vol, 2)).ToString();
         UpdatePrefs();
-        ReplaceString("Colorblind:", 57, " Effects:", (temp), 4);
+        string temp = MakeFourChar(vol);
         music = (float)Math.Round(vol, 2);
+        ReplaceString("Colorblind:", 57, " Effects:", (temp), 4);
         //Debug.Log(music);
     }
 
     public void SetEffects(float vol)
     {
-        string temp;
-        if (Math.Round(vol, 2) == 0)
-            temp = "0.00";
-        else if (Math.Round(vol, 2) == 1)
-            temp = "1.00";
-        else
-            temp = (Math.Round(vol, 2)).ToString();
         UpdatePrefs();
-        ReplaceString("Colorblind:", 70, " end", (temp), 4);
+        string temp = MakeFourChar(vol);
         effects = (float)Math.Round(vol, 2);
+        ReplaceString("Colorblind:", 70, " end", (temp), 4);
         //Debug.Log(effects);
     }
 }

@@ -22,7 +22,8 @@ public class SetEffects : MonoBehaviour
     {
         if (init == false)
         {
-            Debug.Log(pref.effects);
+            //Debug.Log(pref.effects);
+            pref.UpdatePrefs();
             slid.value = pref.effects;
             init = true;
         }

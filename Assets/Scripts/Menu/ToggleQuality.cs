@@ -10,6 +10,7 @@ public class ToggleQuality : MonoBehaviour
     public GameObject quality3;
     public GameObject quality2;
     public GameObject quality1;
+    bool init = false;
 
     Preferences pref;
 
@@ -21,23 +22,27 @@ public class ToggleQuality : MonoBehaviour
 
     public void Update()
     {
-        if (pref.quality == "3")
+        if (init == false)
         {
-            quality3.SetActive(true);
-            quality2.SetActive(false);
-            quality1.SetActive(false);
-        }
-        else if (pref.quality == "2")
-        {
-            quality3.SetActive(false);
-            quality2.SetActive(true);
-            quality1.SetActive(false);
-        }
-        else
-        {
-            quality3.SetActive(false);
-            quality2.SetActive(false);
-            quality1.SetActive(true);
+            if (pref.quality == "3")
+            {
+                quality3.SetActive(true);
+                quality2.SetActive(false);
+                quality1.SetActive(false);
+            }
+            else if (pref.quality == "2")
+            {
+                quality3.SetActive(false);
+                quality2.SetActive(true);
+                quality1.SetActive(false);
+            }
+            else
+            {
+                quality3.SetActive(false);
+                quality2.SetActive(false);
+                quality1.SetActive(true);
+            }
+            init = true;
         }
     }
 

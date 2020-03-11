@@ -21,6 +21,7 @@ public class ZoomOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnClick()
     {
         GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-        text.SetActive(false);
+        if (text != null)
+            text.SetActive(false);
     }
 }

@@ -9,6 +9,7 @@ public class ToggleHints : MonoBehaviour
     public GameObject menu;
     public GameObject hintsOff;
     public GameObject hintsOn;
+    bool init = false;
 
     Preferences pref;
 
@@ -20,15 +21,19 @@ public class ToggleHints : MonoBehaviour
 
     public void Update()
     {
-        if (pref.hints == "0")
+        if (init == false)
         {
-            hintsOff.SetActive(true);
-            hintsOn.SetActive(false);
-        }
-        else
-        {
-            hintsOff.SetActive(false);
-            hintsOn.SetActive(true);
+            if (pref.hints == "0")
+            {
+                hintsOff.SetActive(true);
+                hintsOn.SetActive(false);
+            }
+            else
+            {
+                hintsOff.SetActive(false);
+                hintsOn.SetActive(true);
+            }
+            init = true;
         }
     }
 

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 321}
   m_MaxSize: {x: 12002, y: 8021}
   vertical: 0
-  controlID: 42093
+  controlID: 51413
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 321}
   m_MaxSize: {x: 8002, y: 8021}
   vertical: 1
-  controlID: 42094
+  controlID: 51373
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 42095
+  controlID: 51374
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 72fbffff923500003c360000d63600002c370000ce3700001c3a0000fa3b00003c3c0000
+      m_ExpandedIDs: a2faffff72fbffff92350000d6360000d23b00003c3c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -309,9 +309,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 414.48123, y: 254.37195, z: 115.32745}
+    m_Target: {x: 434.65625, y: 273.94922, z: 119.25}
     speed: 2
-    m_Value: {x: 414.48123, y: 254.37195, z: 115.32745}
+    m_Value: {x: 434.65625, y: 273.94922, z: 119.25}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -357,17 +357,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.020997308, y: 0.010497475, z: -0.00022047944, w: 0.9997245}
+    m_Target: {x: 0.020975765, y: 0.04647302, z: -0.0009760705, w: 0.99869967}
     speed: 2
-    m_Value: {x: 0.020997306, y: 0.010497474, z: -0.00022047941, w: 0.9997244}
+    m_Value: {x: 0.020975748, y: 0.04647298, z: -0.0009760697, w: 0.99869883}
   m_Size:
-    m_Target: 1135.0338
+    m_Target: 638.6183
     speed: 2
-    m_Value: 1135.0338
+    m_Value: 638.6183
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.49748743
@@ -665,5 +665,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 14786
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 15354
+  m_LastVerticalScrollValue: 479

@@ -22,7 +22,8 @@ public class SetMusic : MonoBehaviour
     {
         if (init == false)
         {
-            Debug.Log(pref.music);
+            //Debug.Log("set music: " + pref.music);
+            pref.UpdatePrefs();
             slid.value = pref.music;
             init = true;
         }

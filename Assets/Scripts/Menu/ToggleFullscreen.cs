@@ -9,6 +9,7 @@ public class ToggleFullscreen : MonoBehaviour
     public GameObject menu;
     public GameObject fullOff;
     public GameObject fullOn;
+    bool init = false;
 
     Preferences pref;
 
@@ -20,15 +21,19 @@ public class ToggleFullscreen : MonoBehaviour
 
     public void Update()
     {
-        if (pref.full == "0")
+        if (init == false)
         {
-            fullOff.SetActive(true);
-            fullOn.SetActive(false);
-        }
-        else
-        {
-            fullOff.SetActive(false);
-            fullOn.SetActive(true);
+            if (pref.full == "0")
+            {
+                fullOff.SetActive(true);
+                fullOn.SetActive(false);
+            }
+            else
+            {
+                fullOff.SetActive(false);
+                fullOn.SetActive(true);
+            }
+            init = true;
         }
     }
 

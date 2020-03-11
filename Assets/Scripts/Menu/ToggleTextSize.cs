@@ -11,6 +11,7 @@ public class ToggleTextSize : MonoBehaviour
     public GameObject text2;
     public GameObject text1;
     private TextMesh[] text;
+    bool init = false;
 
     Preferences pref;
 
@@ -18,28 +19,32 @@ public class ToggleTextSize : MonoBehaviour
     {
         button.onClick.AddListener(OnClick);
         pref = menu.GetComponent<Preferences>();
-        text = menu.GetComponents<TextMesh>();
+        text = menu.GetComponentsInChildren<TextMesh>();
     }
 
     public void Update()
     {
-        if (pref.text == "3")
+        if (init == false)
         {
-            text3.SetActive(true);
-            text2.SetActive(false);
-            text1.SetActive(false);
-        }
-        else if(pref.text == "2")
-        {
-            text3.SetActive(false);
-            text2.SetActive(true);
-            text1.SetActive(false);
-        }
-        else
-        {
-            text3.SetActive(false);
-            text2.SetActive(false);
-            text1.SetActive(true);
+            if (pref.text == "3")
+            {
+                text3.SetActive(true);
+                text2.SetActive(false);
+                text1.SetActive(false);
+            }
+            else if (pref.text == "2")
+            {
+                text3.SetActive(false);
+                text2.SetActive(true);
+                text1.SetActive(false);
+            }
+            else
+            {
+                text3.SetActive(false);
+                text2.SetActive(false);
+                text1.SetActive(true);
+            }
+            init = true;
         }
     }
 
@@ -48,6 +53,7 @@ public class ToggleTextSize : MonoBehaviour
         Debug.Log("Text Size button pressed");
         if (pref.text == "3")
         {
+            Debug.Log("text was large" + text.Length);
             foreach (var t in text)
             {
                 Debug.Log("text was large");
@@ -56,6 +62,7 @@ public class ToggleTextSize : MonoBehaviour
         }
         else if (pref.text == "2")
         {
+            Debug.Log("text was medium" + text.Length);
             foreach (var t in text)
             {
                 Debug.Log("text was medium");
@@ -64,6 +71,7 @@ public class ToggleTextSize : MonoBehaviour
         }
         else
         {
+            Debug.Log("text was small" + text.Length);
             foreach (var t in text)
             {
                 Debug.Log("text was small");
