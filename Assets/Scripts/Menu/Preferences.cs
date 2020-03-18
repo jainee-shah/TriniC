@@ -20,12 +20,14 @@ public class Preferences : MonoBehaviour
     string defaultPrefs;
     string[] readPrefs;
 
+    public GameObject textSize;
+    ToggleTextSize temp;
+
     // Start is called before the first frame update
     void Start()
     {
         path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
         prefPath = path + "/TriniC/Preferences.txt";
-        //UpdatePrefs();
         if (!System.IO.File.Exists(@prefPath))
         {
             defaultPrefs = "Colorblind:0 Text:3 Hints:1 Fullscreen:1 Quality:3 Music:1.00 Effects:1.00 end\n";
@@ -33,6 +35,22 @@ public class Preferences : MonoBehaviour
             Menu.SetActive(false);
             NewUser.SetActive(true);
         }
+        UpdatePrefs();
+        temp = textSize.GetComponent<ToggleTextSize>();
+        temp.Start();
+        if (text == "3")
+        {
+            temp.StartTextSize(3);
+        }
+        else if (text == "2")
+        {
+            temp.StartTextSize(2);
+        }
+        else
+        {
+            temp.StartTextSize(1);
+        }
+        temp.button = null;
     }
 
     private string Between(string s, string first, int firstLength, string second, int subSIndex)
