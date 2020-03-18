@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Menu\CreateAccount.cs" />
      <Compile Include="Assets\Scripts\Menu\LoginAccount.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Menu\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Menu\Preferences.cs" />
      <Compile Include="Assets\Scripts\Menu\SetEffects.cs" />
      <Compile Include="Assets\Scripts\Menu\SetMusic.cs" />
