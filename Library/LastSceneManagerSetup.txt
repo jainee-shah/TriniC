@@ -1,21 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Menu.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
-- path: Assets/Scenes/Menu_Unlimited.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/ConnectFour.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/Checkers.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
 - path: Assets/Scenes/Chess.unity
   isLoaded: 1
-  isActive: 0
+  isActive: 1
   isSubScene: 0
