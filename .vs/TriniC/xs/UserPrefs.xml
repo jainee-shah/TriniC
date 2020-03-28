@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{27F1F0F1-445A-1F3A-CFD6-13DBB283BB71}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Connect Four/scripts/CameraSize.cs">
+    <Files>
+      <File FileName="Assets/Connect Four/scripts/GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Connect Four/scripts/CameraSize.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d5d6d3e1-750e-4c95-a0b4-3b41304769da" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
