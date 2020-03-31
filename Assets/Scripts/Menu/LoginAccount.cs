@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 public class LoginAccount : MonoBehaviour
 {
     public GameObject username;
-    public GameObject password;
+    //public GameObject password;
     public GameObject selectedPlayer;
     public GameObject C4Hours;
     public GameObject CheckersHours;
@@ -21,7 +21,7 @@ public class LoginAccount : MonoBehaviour
     public GameObject CheckersWins;
     public GameObject ChessWins;
     private string Username;
-    private string Password;
+    private string Password = "123";
     private string form;
     private string[] lines;
     private string path;
@@ -29,6 +29,7 @@ public class LoginAccount : MonoBehaviour
     public void Start()
     {
         path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+        Username = username.GetComponent<TextMeshProUGUI>().text;
     }
 
     public void LoginButton()
@@ -90,7 +91,7 @@ public class LoginAccount : MonoBehaviour
             if (login)
                 Debug.LogWarning("login successful");
             username.GetComponent<InputField>().text = "";
-            password.GetComponent<InputField>().text = "";
+            //password.GetComponent<InputField>().text = "";
         }
     }
 
@@ -104,7 +105,7 @@ public class LoginAccount : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -119,5 +120,5 @@ public class LoginAccount : MonoBehaviour
         }
         Username = username.GetComponent<InputField>().text;
         Password = password.GetComponent<InputField>().text;
-    }
+    }*/
 }
