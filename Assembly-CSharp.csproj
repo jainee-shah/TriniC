@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\Menu\ToggleFullscreen.cs" />
      <Compile Include="Assets\Scripts\Menu\ToggleHints.cs" />
      <Compile Include="Assets\Scripts\Menu\ToggleQuality.cs" />
+     <Compile Include="Assets\Scripts\Menu\ToggleResolution.cs" />
      <Compile Include="Assets\Scripts\Menu\ToggleTextSize.cs" />
      <Compile Include="Assets\Scripts\Menu\ZoomOnHover.cs" />
      <Compile Include="Assets\Scripts\Pieces\Bishop.cs" />

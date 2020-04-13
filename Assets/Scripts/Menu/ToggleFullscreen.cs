@@ -27,6 +27,7 @@ public class ToggleFullscreen : MonoBehaviour
             {
                 fullOff.SetActive(true);
                 fullOn.SetActive(false);
+
             }
             else
             {

@@ -159,11 +159,23 @@ public class Preferences : MonoBehaviour
         {
             full = "1";
             ReplaceString("Colorblind:", 39, " Quality:", "1", 1);
+            if (quality == "3")
+                Screen.SetResolution(1920, 1080, true);
+            else if (quality == "2")
+                Screen.SetResolution(1280, 720, true);
+            else
+                Screen.SetResolution(640, 480, true);
         }
         else
         {
             full = "0";
             ReplaceString("Colorblind:", 39, " Quality:", "0", 1);
+            if (quality == "3")
+                Screen.SetResolution(1920, 1080, false);
+            else if (quality == "2")
+                Screen.SetResolution(1280, 720, false);
+            else
+                Screen.SetResolution(640, 480, false);
         }
     }
 
@@ -174,16 +186,28 @@ public class Preferences : MonoBehaviour
         {
             quality = "1";
             ReplaceString("Colorblind:", 49, " Music:", "1", 1);
+            if (full == "0")
+                Screen.SetResolution(640, 480, false);
+            else
+                Screen.SetResolution(640, 480, true);
         }
         else if (quality == "2")
         {
             quality = "3";
             ReplaceString("Colorblind:", 49, " Music:", "3", 1);
+            if (full == "0")
+                Screen.SetResolution(1920, 1080, false);
+            else
+                Screen.SetResolution(1920, 1080, true);
         }
         else
         {
             quality = "2";
             ReplaceString("Colorblind:", 49, " Music:", "2", 1);
+            if (full == "0")
+                Screen.SetResolution(1280, 720, false);
+            else
+                Screen.SetResolution(1280, 720, true);
         }
     }
 
