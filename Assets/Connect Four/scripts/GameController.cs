@@ -36,6 +36,11 @@ namespace ConnectFour
 		public string playerLoseText = "Player 1 Wins!";
 		public string drawText = "Draw!";
 
+		public GameObject turnText;
+		public string playerOneTurn = "Player 1's Turn";
+		public string playerTwoTurn = "Player 2's Turn";
+		public string endTurn = "End Game";
+
 		public GameObject btnPlayAgain;
 		bool btnPlayAgainTouching = false;
 		Color btnPlayAgainOrigColor;
@@ -45,6 +50,10 @@ namespace ConnectFour
 
 		// temporary gameobject, holds the piece at mouse position until the mouse has clicked
 		GameObject gameObjectTurn;
+
+		GameObject pieceAfterShadow;
+
+		public Color startcolor;
 
 		/// <summary>
 		/// The Game field.
@@ -201,6 +210,7 @@ namespace ConnectFour
 			if(gameObjectTurn == null)
 			{
 				gameObjectTurn = SpawnPiece();
+				pieceAfterShadow = SpawnPiece();
 			}
 			else
 			{
@@ -209,6 +219,45 @@ namespace ConnectFour
 				gameObjectTurn.transform.position = new Vector3(
 					Mathf.Clamp(pos.x, 0, numColumns-1), 
 					gameObjectField.transform.position.y + 1, 0);
+				
+				//AFTERSHADOW START
+				Vector3 startPosition = gameObjectTurn.transform.position;
+				Vector3 endPosition = new Vector3();
+
+				// round to a grid cell
+				int x = Mathf.RoundToInt(startPosition.x);
+				startPosition = new Vector3(x, startPosition.y, startPosition.z);
+
+				// is there a free cell in the selected column?
+				bool foundFreeCell = false;
+				for(int i = numRows-1; i >= 0; i--)
+				{
+					if(field[x, i] == 0)
+					{
+						foundFreeCell = true;
+						// field[x, i] = isPlayersTurn ? (int)Piece.Blue : (int)Piece.Red;
+						endPosition = new Vector3(x, i * -1, startPosition.z);
+
+						break;
+					}
+				}
+
+				if(foundFreeCell)
+				{
+					//Creates a new after shadow piece
+					pieceAfterShadow.GetComponent<Renderer>().enabled = true;
+					
+					//change the opacity of the game object => could possible initialize this somewhere else
+					Color oldCol = gameObjectTurn.GetComponent<Renderer>().material.color;
+					Color newCol = new Color(oldCol.r, oldCol.g, oldCol.b, 0.5f);
+					pieceAfterShadow.GetComponent<Renderer>().material.color = newCol;
+					float distance = Vector3.Distance(startPosition, endPosition);
+
+					//this puts the shadow in the position
+					pieceAfterShadow.transform.position = Vector3.Lerp (startPosition, endPosition, ((numRows - distance) + 1));
+				}
+
+				//AFTERSHADOW END
 
 				// click the left mouse button to drop the piece into the selected column
 				if(Input.GetMouseButtonDown(0) && !mouseButtonPressed && !isDropping)
@@ -253,6 +302,8 @@ namespace ConnectFour
 		/// <param name="gObject">Game Object.</param>
 		IEnumerator dropPiece(GameObject gObject)
 		{
+
+
 			isDropping = true;
 
 			Vector3 startPosition = gObject.transform.position;
@@ -297,7 +348,7 @@ namespace ConnectFour
 
 				// remove the temporary gameobject
 				DestroyImmediate(gameObjectTurn);
-
+				DestroyImmediate(pieceAfterShadow);
 				// run coroutine to check if someone has won
 				StartCoroutine(Won());
 
