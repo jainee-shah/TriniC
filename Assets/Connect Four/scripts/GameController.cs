@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace ConnectFour
 {
@@ -61,6 +62,9 @@ namespace ConnectFour
 		public string playerTwoTurn = "Player 2's Turn";
 		public string endTurn = "End Game";
 
+		public GameObject backButton;
+		public GameObject resetButton;
+
 		public GameObject btnPlayAgain;
 		bool btnPlayAgainTouching = false;
 		Color btnPlayAgainOrigColor;
@@ -102,7 +106,7 @@ namespace ConnectFour
 			CreateField ();
 
 			isPlayersTurn = System.Convert.ToBoolean(Random.Range (0, 1));
-
+			turnText.GetComponent<TextMesh>().text = isPlayersTurn ? playerTwoTurn : playerOneTurn;
 			btnPlayAgainOrigColor = btnPlayAgain.GetComponent<Renderer>().material.color;
 		}
 
@@ -113,6 +117,9 @@ namespace ConnectFour
 		{
 			winningText.SetActive(false);
 			btnPlayAgain.SetActive(false);
+			turnText.SetActive(true);
+			backButton.SetActive(true);
+			resetButton.SetActive(true);
 
 			isLoading = true;
 
@@ -147,6 +154,15 @@ namespace ConnectFour
 
 			btnPlayAgain.transform.position = new Vector3(
 				(numColumns-1) / 2.0f, -((numRows-1) / 2.0f) - 1, btnPlayAgain.transform.position.z);
+			
+			turnText.transform.position = new Vector3(
+				(numColumns-1) / 2.0f, -6, -8);
+
+			backButton.transform.position = new Vector3(
+				1300, 800, -8);
+			
+			resetButton.transform.position = new Vector3(
+				1500, 800, -8);
 		}
 
 		/// <summary>
@@ -206,6 +222,59 @@ namespace ConnectFour
 			{
 				btnPlayAgainTouching = false;
 			}
+		}
+		
+		// static function NameContains(start: String, transf: Transform) {
+		// 	if (transf.name.StartsWith(start)){
+		// 		// this object starts with the string passed in "start":
+		// 		// do whatever you want with it...
+		// 		print(transf.name); // like printing its name
+		// 	}
+		// 	// now search in its children, grandchildren etc.
+		// 	for (var child in transf){
+		// 		NameContains(start, child);
+		// 	}
+		// }
+
+		public void Back()
+		{
+			SceneManager.LoadScene(0);
+		}
+
+		void Reset()
+		{
+			// StartGame();
+			SceneManager.LoadScene(1);
+			// gameOver = true;
+			// // CreateField();
+			// gameObjectField = GameObject.Find ("Field");
+			// DestroyImmediate(gameObjectField);
+			// // gameObjectField = GameObject.Find ("Field");
+			// DestroyImmediate(gameObjectTurn);
+			// DestroyImmediate(pieceAfterShadow);
+			// CreateField();
+			// // create an empty field and instantiate the cells
+			// field = new int[numColumns, numRows];
+			// for(int x = 0; x < numColumns; x++)
+			// {
+			// 	for(int y = 0; y < numRows; y++)
+			// 	{
+			// 		field[x, y] = (int)Piece.Empty;
+			// 		GameObject g = Instantiate(pieceField, new Vector3(x, y * -1, -1), Quaternion.identity) as GameObject;
+			// 		g.transform.parent = gameObjectField.transform;
+			// 	}
+			// }
+			// for(int i = numRows-1; i >= 0; i--)
+			// {
+			// 	if(field[x, i] == 0)
+			// 	{
+			// 		foundFreeCell = true;
+			// 		field[x, i] = isPlayersTurn ? (int)Piece.Blue : (int)Piece.Red;
+			// 		endPosition = new Vector3(x, i * -1, startPosition.z);
+
+			// 		break;
+			// 	}
+			// }
 		}
 
 		// Update is called once per frame
@@ -269,7 +338,7 @@ namespace ConnectFour
 					
 					//change the opacity of the game object => could possible initialize this somewhere else
 					Color oldCol = gameObjectTurn.GetComponent<Renderer>().material.color;
-					Color newCol = new Color(oldCol.r, oldCol.g, oldCol.b, 0.5f);
+					Color newCol = new Color(oldCol.r, oldCol.g, oldCol.b, 0.2f);
 					pieceAfterShadow.GetComponent<Renderer>().material.color = newCol;
 					float distance = Vector3.Distance(startPosition, endPosition);
 
@@ -322,7 +391,7 @@ namespace ConnectFour
 		/// <param name="gObject">Game Object.</param>
 		IEnumerator dropPiece(GameObject gObject)
 		{
-
+			
 
 			isDropping = true;
 
@@ -377,6 +446,7 @@ namespace ConnectFour
 					yield return null;
 
 				isPlayersTurn = !isPlayersTurn;
+				turnText.GetComponent<TextMesh>().text = isPlayersTurn ? playerTwoTurn : playerOneTurn;
 			}
 
 			isDropping = false;
