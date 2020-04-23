@@ -6,6 +6,26 @@ namespace ConnectFour
 {
 	public class GameController : MonoBehaviour 
 	{
+		public GameObject popupWindow;
+		public GameObject tutorialWindow;
+
+        public void NoTutorial()
+        {
+			popupWindow.SetActive(false);
+			StartGame();
+        }
+		public void YesTutorial()
+		{
+			popupWindow.SetActive(false);
+			tutorialWindow.SetActive(true);
+			
+		}
+        public void closeTutorial()
+        {
+			popupWindow.SetActive(false);
+			tutorialWindow.SetActive(false);
+			StartGame();
+		}
 		enum Piece
 		{
 			Empty = 0,
@@ -72,7 +92,7 @@ namespace ConnectFour
 		bool isCheckingForWinner = false;
 
 		// Use this for initialization
-		void Start () 
+		void StartGame () 
 		{
 			int max = Mathf.Max (numRows, numColumns);
 
