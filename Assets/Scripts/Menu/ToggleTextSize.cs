@@ -244,7 +244,7 @@ public class ToggleTextSize : MonoBehaviour
                 text2.SetActive(true);
                 text1.SetActive(false);
             }
-            else
+            else if (pref.text == "1")
             {
                 text3.SetActive(false);
                 text2.SetActive(false);
@@ -267,7 +267,7 @@ public class ToggleTextSize : MonoBehaviour
             Debug.Log("text was medium");
             ChangeSize(2);
         }
-        else
+        else if (pref.text == "1")
         {
             Debug.Log("text was small");
             ChangeSize(1);
