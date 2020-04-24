@@ -295,6 +295,8 @@ MonoBehaviour:
   endTurn: End Game
   backButton: {fileID: 0}
   resetButton: {fileID: 0}
+  backText: {fileID: 0}
+  resetText: {fileID: 0}
   btnPlayAgain: {fileID: 0}
   startcolor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &71925275
@@ -465,6 +467,8 @@ MonoBehaviour:
   endTurn: End Game
   backButton: {fileID: 71925269}
   resetButton: {fileID: 1210057382}
+  backText: {fileID: 0}
+  resetText: {fileID: 0}
   btnPlayAgain: {fileID: 638031508}
   startcolor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &137424724
@@ -1462,7 +1466,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079093269}
-  m_Text: Turn Text
+  m_Text: Player 2's Turn
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1626,6 +1630,8 @@ MonoBehaviour:
   endTurn: End Game
   backButton: {fileID: 0}
   resetButton: {fileID: 0}
+  backText: {fileID: 0}
+  resetText: {fileID: 0}
   btnPlayAgain: {fileID: 0}
   startcolor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1210057386
