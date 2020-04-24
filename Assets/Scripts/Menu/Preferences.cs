@@ -164,7 +164,7 @@ public class Preferences : MonoBehaviour
             else if (quality == "2")
                 Screen.SetResolution(1280, 720, true);
             else
-                Screen.SetResolution(640, 480, true);
+                Screen.SetResolution(850, 480, true);
         }
         else
         {
@@ -175,7 +175,7 @@ public class Preferences : MonoBehaviour
             else if (quality == "2")
                 Screen.SetResolution(1280, 720, false);
             else
-                Screen.SetResolution(640, 480, false);
+                Screen.SetResolution(850, 480, false);
         }
     }
 
@@ -187,9 +187,9 @@ public class Preferences : MonoBehaviour
             quality = "1";
             ReplaceString("Colorblind:", 49, " Music:", "1", 1);
             if (full == "0")
-                Screen.SetResolution(640, 480, false);
+                Screen.SetResolution(850, 480, false);
             else
-                Screen.SetResolution(640, 480, true);
+                Screen.SetResolution(850, 480, true);
         }
         else if (quality == "2")
         {
