@@ -58,6 +58,8 @@
      <Compile Include="Assets\Connect Four\scripts\ButtonActions.cs" />
      <Compile Include="Assets\Connect Four\scripts\CameraSize.cs" />
      <Compile Include="Assets\Connect Four\scripts\GameController.cs" />
+     <Compile Include="Assets\Connect Four\scripts\HintsOff.cs" />
+     <Compile Include="Assets\Connect Four\scripts\UpdateC4Sound.cs" />
      <Compile Include="Assets\MoveSelector.cs" />
      <Compile Include="Assets\Scripts\Board.cs" />
      <Compile Include="Assets\Scripts\Checkers\CheckersBoard.cs" />
