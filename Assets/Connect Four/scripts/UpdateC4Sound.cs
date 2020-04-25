@@ -10,6 +10,7 @@ public class UpdateC4Sound : MonoBehaviour
 
     Preferences pref;
     AudioSource AS;
+    bool initialized = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class UpdateC4Sound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AS.volume = pref.music;
+        if(!initialized)
+            AS.volume = pref.music;
     }
 }

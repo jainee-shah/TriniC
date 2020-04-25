@@ -8,6 +8,7 @@ public class HintsOff : MonoBehaviour
 
     Preferences pref;
     ConnectFour.GameController GCScript;
+    bool initialized = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,11 @@ public class HintsOff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pref.hints == "0")
+        if (!initialized && pref.hints == "0")
+        {
             GCScript.NoTutorial();
+            initialized = true;
+        }
         //else if (pref.hints == "1")
             //GCScript.YesTutorial();
     }

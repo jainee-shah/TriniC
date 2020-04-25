@@ -292,7 +292,7 @@ namespace ConnectFour
 		// Update is called once per frame
 		void Update () 
 		{
-			if(isLoading)
+            if (isLoading)
 				return;
 
 			if(isCheckingForWinner)
