@@ -120,6 +120,9 @@ namespace ConnectFour
 		{
 			winningText.SetActive(false);
 			btnPlayAgain.SetActive(false);
+			backText.SetActive(false);
+			resetText.SetActive(false);
+
 			turnText.SetActive(true);
 			backButton.SetActive(true);
 			resetButton.SetActive(true);
@@ -161,17 +164,17 @@ namespace ConnectFour
 			turnText.transform.position = new Vector3(
 				(numColumns-1) / 2.0f, -6, -8);
 
-			backButton.transform.position = new Vector3(
-				1500, 900, -8);
+			// backButton.transform.position = new Vector3(
+			// 	1500, 900, -8);
 			
-			resetButton.transform.position = new Vector3(
-				1500, 800, -8);
+			// resetButton.transform.position = new Vector3(
+			// 	1500, 800, -8);
 
-			backText.transform.position = new Vector3(
-				1500, 850, -8);
+			// backText.transform.position = new Vector3(
+			// 	1500, 850, -8);
 
-			resetText.transform.position = new Vector3(
-				1500, 750, -8);
+			// resetText.transform.position = new Vector3(
+			// 	1500, 750, -8);
 		}
 
 		/// <summary>
@@ -219,7 +222,7 @@ namespace ConnectFour
 					btnPlayAgainTouching = true;
 					
 					//CreateField();
-					Application.LoadLevel(0);
+					Application.LoadLevel(1);
 				}
 			}
 			else
